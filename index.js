@@ -16,25 +16,34 @@ let newString = "MohsinKhan";
 // return the count of vowels in a current string.
 // a,e,i,o,u
 
-let getCount = (str)=>{
-    let vowelsCount = 0;
+// let getCount = (str)=>{
+//     let vowelsCount = 0;
 
-    const arr = str.split("");
-    for(let i = 0; i < arr.length; i++){
-        switch(arr[i]){
-            case 'a': vowelsCount++;
-            break;
-            case 'e': vowelsCount++;
-            break;
-            case 'i': vowelsCount++;
-            break;
-            case 'o': vowelsCount++;
-            break;
-            case 'u': vowelsCount++;
-            break;
-        }
-    }
-    return vowelsCount;
+//     const arr = str.split("");
+//     for(let i = 0; i < arr.length; i++){
+//         switch(arr[i]){
+//             case 'a': vowelsCount++;
+//             break;
+//             case 'e': vowelsCount++;
+//             break;
+//             case 'i': vowelsCount++;
+//             break;
+//             case 'o': vowelsCount++;
+//             break;
+//             case 'u': vowelsCount++;
+//             break;
+//         }
+//     }
+//     return vowelsCount;
+// }
+
+// console.log(getCount('helloworld'));
+
+function getCount(str){
+    let vowels = ['a','e','i','o','u'];
+    return str.split('').filter(letters =>{
+        return vowels.includes(letters) ? true : false
+    }).length;
 }
 
 console.log(getCount('helloworld'));
