@@ -39,11 +39,31 @@ let newString = "MohsinKhan";
 
 // console.log(getCount('helloworld'));
 
-function getCount(str){
-    let vowels = ['a','e','i','o','u'];
-    return str.split('').filter(letters =>{
-        return vowels.includes(letters) ? true : false
-    }).length;
-}
+// function getCount(str){
+//     let vowels = ['a','e','i','o','u'];
+//     return str.split('').filter(letters =>{
+//         return vowels.includes(letters) ? true : false
+//     }).length;
+// }
 
-console.log(getCount('helloworld'));
+// console.log(getCount('helloworld'));
+
+
+    function findSmallestInt(arrayofNumbers){
+
+        let smallestNumber;
+
+        for(let i = 0; i < arrayofNumbers.length; i++){
+            const arrNumber = arrayofNumbers[i];
+
+            if(i === 0){
+                smallestNumber = arrNumber;
+            }
+            if(arrNumber < smallestNumber){
+                smallestNumber = arrNumber;
+            }
+        }
+        return smallestNumber;
+    }
+
+console.log(findSmallestInt([-1,1,2,3,-9,5,6,8]));
