@@ -49,21 +49,37 @@ let newString = "MohsinKhan";
 // console.log(getCount('helloworld'));
 
 
-    function findSmallestInt(arrayofNumbers){
+//     function findSmallestInt(arrayofNumbers){
 
-        let smallestNumber;
+//         let smallestNumber;
 
-        for(let i = 0; i < arrayofNumbers.length; i++){
-            const arrNumber = arrayofNumbers[i];
+//         for(let i = 0; i < arrayofNumbers.length; i++){
+//             const arrNumber = arrayofNumbers[i];
 
-            if(i === 0){
-                smallestNumber = arrNumber;
-            }
-            if(arrNumber < smallestNumber){
-                smallestNumber = arrNumber;
-            }
-        }
-        return smallestNumber;
-    }
+//             if(i === 0){
+//                 smallestNumber = arrNumber;
+//             }
+//             if(arrNumber < smallestNumber){
+//                 smallestNumber = arrNumber;
+//             }
+//         }
+//         return smallestNumber;
+//     }
 
-console.log(findSmallestInt([-1,1,2,3,-9,5,6,8]));
+// console.log(findSmallestInt([-1,1,2,3,-9,5,6,8]));
+
+
+// let intersection = [[1,2,3,11],[2,3,4,11]]; // get same elements without using forloop.
+
+let newfuntion = (arr1,arr2)=> arr1.filter(value => arr2.includes(value));
+
+function intersection(arr1,arr2){
+    return arr1.filter((value)=>{
+       return arr2.includes(value);
+    })
+}
+
+let result = intersection([1,2,3],[2,3,4])
+console.log(result);
+
+// console.log(newfuntion([1,2,3,11],[2,3,4,11]));
